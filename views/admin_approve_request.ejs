@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request</title>
+    <link rel="stylesheet" href="../designs/admin_approve_request.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+
+    <div class="top">
+      <div class="top-left">
+        <div class="py-logo2">
+          <img src="../Images/pyLogo2.png" alt="PY Logo" height="75px" />
+        </div>
+        <div class="dashboard-text">
+          <h1>Transaction</h1>
+        </div>
+      </div>
+      <div class="profile">
+        <img src="../Images/profile.png" alt="Profile" height="75px" />
+        <p><%= admin.admin_firstname + ' ' + admin.admin_middlename + ' ' + admin.admin_lastname %></p> <!-- Changed 'user' to 'admin' -->
+        <i class="fa-solid fa-caret-down"></i>
+      </div>
+    </div>
+
+    <div class="container2">  
+      <div class="left">
+        <ul>
+
+          <div class="personal-info">
+            <form action="/personal-info" method="GET">
+              <i class="fa-solid fa-user"></i>
+              <input type="button" value="Personal Info">
+            </form>
+          </div>
+
+          <div class="transactions">
+            <form action="/transaction" method="GET">
+              <i class="fa-solid fa-newspaper"></i>
+              <input type="button" value="Transactions">
+            </form>
+          </div>
+
+          <div class="contacts">
+            <form action="/contacts" method="GET">
+              <i class="fa-solid fa-phone"></i>
+              <input type="button" value="Contacts">
+            </form>
+          </div>
+          
+        </ul>
+      </div>
+
+      <div class="main-container">
+
+        <div class="sub-container">
+
+          <h1>Reserved Court</h1>
+
+          <div class="carpenters">
+
+            <table>
+
+              <thead>
+
+                <tr class="carpenters-info">
+                  <th>Equipment Name</th>
+                  <th>Status</th>
+                  <th>Reservation Date</th>
+                  <th>Starting Date</th>
+                  <th>End Date</th>
+                  <th>Actions</th> <!-- Add Actions column -->
+                </tr>
+
+              </thead>
+          
+              <tbody>
+                <% if (reservations && reservations.length > 0) { %>
+                  <% reservations.forEach(function(reservation) { %>
+
+                    <tr id="reservation-<%= reservation.reservation_id %>"> <!-- Add id to the row -->
+                      <td><%= reservation.equipment_name %></td>
+                      <td><%= reservation.reservation_status %></td>
+                      <td><%= new Date(reservation.reservation_createdat).toLocaleString('en-PH', { timeZone: 'Asia/Manila' }) %></td>
+                      <td><%= new Date(reservation.reservation_start).toLocaleString('en-PH', { timeZone: 'Asia/Manila' }) %></td>
+                      <td><%= new Date(reservation.reservation_end).toLocaleString('en-PH', { timeZone: 'Asia/Manila' }) %></td>
+                      <td>
+                        <!-- Approve button -->
+                        <button class="approve" onclick="updateStatus('<%= reservation.reservation_id %>', 'APPROVED')">Approve</button>
+                        <!-- Reject button -->
+                        <button class="reject" onclick="updateStatus('<%= reservation.reservation_id %>', 'REJECTED')">Reject</button>
+                      </td>
+                    </tr>
+
+                  <% }); %>
+                <% } else { %>
+
+                  <tr>
+                    <td colspan="6">No reservations found</td>
+                  </tr>
+
+                <% } %>
+
+              </tbody>
+
+            </table>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>  
+
+
+      <script>
+        function updateStatus(reservationId, status) {
+          // Send an AJAX POST request to update the reservation status
+          fetch('/admin_approve_request', { // Staying on the same route (/admin_approve_request)
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              reservation_id: reservationId,
+              status: status
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              // If the status was updated successfully, remove the row from the table
+              document.getElementById(`reservation-${reservationId}`).remove();
+            } else {
+              alert('Error updating reservation status: ' + data.message);
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+        }
+      </script>
+
+
+  </body>
+</html>

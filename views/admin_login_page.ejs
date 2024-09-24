@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PY SERVES</title>
+    <link rel="stylesheet" href="../designs/admin_login_page.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="back-button">
+            <a href="">
+                <button class="back1">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                  </button>
+            </a>
+          </div>
+      
+          <div class="brgy-py">
+            <div class="py-images">
+              <div class="py-logo">
+                <img src="../Images/pyLogo.png" alt="PY logo" width="150px" />
+              </div>
+              <div class="py-serves">
+                <img src="../Images/pyServes.png" alt="PY servers" width="350px" />
+              </div>
+            </div>
+      
+            <div class="user-login">
+              <div class="user-input">
+                <h1>Hi, Admin ng Barangay PY!</h1>
+                <p>Log in</p>
+              </div>
+
+              <form action="/admin_login_page" method="POST">
+                <input type="email" name="admin_useremail" placeholder="Username" required>
+                <input type="password" name="admin_password" placeholder="Password" required>
+                <a href="" class="forgot-password">Forgot Password</a>
+                
+              <div class="sign-button">
+                  
+                <input type="submit" value="Log In"> 
+              </form>
+              
+              <p>or</p>
+              <a href="/sign-up">
+                <button>Sign Up</button>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+
+
+  </body>
+</html>

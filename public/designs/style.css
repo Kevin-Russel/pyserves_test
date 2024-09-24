@@ -1,0 +1,604 @@
+* {
+    font-family: arial;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;  
+}
+
+.back-button {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.back1 {
+    background-color: #d9d9d9;
+    padding: 20px 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back1:hover {
+    background-color: #318798;
+}
+
+.brgy-py {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px;
+    gap: 20%;
+}
+
+.py-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.py-logo {
+    width: 100%;
+    max-width: 150px;
+}
+
+.py-serves {
+    width: 100%;
+    max-width: 350px;
+}
+
+.user-login {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
+
+.user-login input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.user-login button {
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: #318798;
+    border: none;
+}
+
+.user-login h1, .sign-button{
+    text-align: center;
+}
+
+.sign-button a{
+    text-align: center;
+}
+
+.user-login .forgot-password {
+    display: block;
+    text-align: right;
+    margin-right: 5.5%;
+    margin-top: 5px;
+    color: black;
+}
+
+.user-input p {
+    font-weight: bold;
+}
+
+/* End of Desktop 1 */
+
+.top {
+    background-color: #293747;
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    height: 100px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.top-left h1 {
+    color: white;
+}
+
+.profile {
+    display: flex;
+    align-items: center; 
+    margin-left: auto;
+    margin-right: 20px;
+    gap: 10px;
+}
+
+.profile img {
+    border-radius: 50%; 
+    width: 60px;
+    height: 60px;
+}
+
+.profile p {
+    color: white; 
+    margin: 0;
+    font-size: 1rem;
+}
+
+.container2 {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 86vh;
+    width: 100%;
+}
+
+.left {
+    display: inline-block;
+    background-color: #d9d9d9;
+    width: 25%;
+}
+
+.left ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 75px;
+}
+
+.left ul li {
+    list-style: none;
+    height: 30px;
+    justify-content: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #D55669;
+}
+
+.left ul li:hover {
+    background-color: #e79d46;
+    color: black;
+    text-decoration: underline;
+}
+
+.mid {
+    display: inline-block;
+    width: 70%;
+}
+
+.buttons .edit-info {
+    margin-top: 90%;
+}
+
+.profile-info {
+    display: flex;
+    gap: 10%;
+    background-color: #318798;
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+
+.profile-info img {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.information {
+    margin: 50px;
+    margin-top: 75px;
+}
+
+.information h3 {
+    font-size: 16px;
+}
+
+.information p {
+    font-size: 14px;
+    margin-left: 50px;
+}
+
+@media (max-width: 1200px) {
+    .announcement-content textarea {
+        width: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* End of Personal Information */
+
+.reserve-equipment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reserve-equipment button {
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    width: 250px;
+    font-size: 1rem;
+    font-weight: bold;
+}    
+
+.right {
+    background-color: #d9d9d9;
+    width: 25%;
+    justify-content: center; 
+}
+
+.right button {
+    padding: 20px;
+    margin-top: 20px;
+    width: 85%;
+    margin-left: 20px;
+    border-color: #318798;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+    font-weight: bold;
+    font-size: 1rem;
+}    
+
+.buttons {
+    margin-top: 50px;
+}
+
+.right button:hover {
+    background-color: #318798;
+    color: white;
+}
+
+/* PY HOME PAGE */
+
+.home-header {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #293747;
+    width: 100%;
+    height: 50px;
+}
+
+.home-header p {
+    color: white; 
+    text-align: center; 
+}
+
+.py-container {
+    background-image: url(Images/py-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%; 
+    height: 110vh; 
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px;
+}
+
+.sub-header img {
+    display: block; 
+    margin-left: 75px;
+}
+
+.sub-header nav ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    margin-right: 100px;
+}
+
+.container-content {
+    color: white;
+    width: 70%;
+    margin-left: 75px;
+    margin-top: 50px;
+    font-size: 1rem;
+}
+
+.learn-more-button button {
+    padding: 10px;
+    background-color: #293747;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+
+.slide2 {
+    width: 100%; 
+    height: 110vh; 
+    display: flex;
+    gap: 20%;
+}
+
+.slide2 img {
+    margin-left: 30%;
+    margin-top: 50px;
+}
+
+.aboutus-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    margin-top: 7%;
+    width: 45%;
+    height: 80vh;
+}
+
+.aboutus-content h3 {
+    text-align: center;
+}
+
+.aboutus-content button {
+    margin-left: 5.5%;
+    margin-top: 9%;
+    width: 175px;
+    padding: 5%;
+    border: none;
+    border-radius: 5px;
+}
+
+.text-here {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.slide3 {
+    width: 100%; 
+    height: 110vh; 
+}
+
+.slide3-content {
+    width: 100%; 
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.slide3-content img {
+    border-radius: 50%;
+    margin-top: 50%;
+}
+
+.barangay-captain-content {
+    width: 300px;
+    margin-top: 5%;
+}
+
+.stats-footer img {
+    width: 100%;
+    height: 150px;
+}
+
+.slide4 {
+    width: 100%; 
+    height: 110vh; 
+    margin-top: 10%;
+}
+
+.council-text {
+    text-align: center;
+}
+
+
+
+.barangay-officials {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10%;
+    margin-top: 5%;
+}
+
+.barangay-officials h2 {
+    background-color: #e79d46;
+    width: 20%;
+    height: 350px;
+    border: 3px solid black;
+}
+
+.footer-content {
+    display: flex;
+    background-color: #293747;
+    margin-top: 7%;
+    gap: 10%;
+}
+
+.footer-right {
+    display: flex;
+}
+
+.more-pages, .govt-info {
+    background-color: #e79d46;
+}
+
+.more-pages li, .govt-info li {
+    list-style: none;
+}
+
+.main-container {
+    width: 100%;
+    background-image: url(Images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.main-container h1 {
+    margin-left: 20px;
+}
+
+.main-container .right {
+    margin-left: 5%;
+} 
+
+/* Personal Info Form */
+
+.maincontainer {
+    width: 100%;
+    height: 86vh;
+    background-color: #318798;
+    display: flex;
+}
+
+.left-mid {
+    width: 80%;
+    background-color: white;
+    margin: 20px;
+}
+
+.user-in h1, .contact-in h1 {
+    text-align: center;
+}
+
+.layer1, .layer2 {
+    display: flex;
+    gap: 20%;
+}
+
+.layer2, .layer3 {
+    margin-top: 20px;
+}
+
+.layer1, .layer2, .layer3 {
+    margin-left: 20px;
+}
+
+.civil-status {
+    display: flex;
+    flex-direction: column;
+}
+
+.civil-status input {
+    margin-top: 15px;
+}
+
+
+.m-d-y {
+    display: flex;
+    gap: 20%;
+}
+
+.rightside {
+    width: 20%;
+    background-color: #D55669;
+}
+
+.rightside button {
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 25px;
+    padding: 20px;
+}
+
+.right-button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.street, .province, .municipality, .barangay {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.province, .municipality, .barangay {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-m-b {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-e {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.contact-number, .email-ad {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TRANSACTION */
+
+
+.sub-container {
+    width: 100%;
+    height: 80vh;
+}
+
+.equipment-details {
+    background-color: #e79d46;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 75vh;
+}
+
+.equipment {
+    width: 50%;
+    background-color: #D55669;
+}
+
+.details {
+    width: 50%;
+}
+
+.equipment h1, .details h1 {
+    text-align: center;
+}

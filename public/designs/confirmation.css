@@ -1,0 +1,125 @@
+* {
+    font-family: arial;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;  
+}
+
+.back-button {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.back1 {
+    background-color: #d9d9d9;
+    padding: 20px 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back1:hover {
+    background-color: #318798;
+}
+
+.brgy-py {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px;
+    gap: 20%;
+}
+
+.py-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.py-logo {
+    width: 100%;
+    max-width: 150px;
+}
+
+.py-serves {
+    width: 100%;
+    max-width: 350px;
+}
+
+.user-login {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
+
+.user-login input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.user-login button {
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: #293747;
+    border: none;
+}
+
+.user-login h1, .sign-button{
+    text-align: center;
+}
+
+.sign-button a{
+    text-align: center;
+}
+
+.sign-button input {
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 30px;
+    background-color: #293747;
+    color: white;
+    border: none;
+}
+
+.user-login .forgot-password {
+    display: block;
+    text-align: right;
+    margin-right: 5.5%;
+    margin-top: 5px;
+    color: black;
+}
+
+.user-input p {
+    font-weight: bold;
+}

@@ -1,0 +1,125 @@
+* {
+    font-family: arial;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    background-color: #293747;
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    height: 100px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.top-left h1 {
+    color: white;
+}
+
+.profile {
+    display: flex;
+    align-items: center; 
+    margin-left: auto;
+    margin-right: 20px;
+    gap: 10px;
+}
+
+.profile img {
+    border-radius: 50%; 
+    width: 60px;
+    height: 60px;
+}
+
+.profile p {
+    color: white; 
+    margin: 0;
+    font-size: 1rem;
+}
+
+.monoblock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.monoblock-chair {
+    width: 75%;
+    height: 80.7vh;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.monoblock-text {
+    padding: 30px;
+    height: 80%;
+}
+
+.h1p-group {
+    display: flex;
+    gap: 35%;
+}
+
+.monoblock-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+.monoblock-input input {
+    padding: 15px;
+    width: 30%;
+    margin-right: 20px;
+}
+
+.purpose input {
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.s-d-t, .e-d-t, .purpose {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+input {
+    margin-top: 7px;
+}
+
+.submit-reset {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.submit-reset button {
+    padding: 20px;
+    width: 150px;
+    margin-top: 130px;
+    border-radius: 5px;
+
+}
+
+.submit-button {
+    background-color: #293747;
+    color: white;
+}
